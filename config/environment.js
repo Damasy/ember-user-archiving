@@ -6,6 +6,9 @@ module.exports = function (environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    'ember-local-storage': {
+      includeEmberDataSupport: true,
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
