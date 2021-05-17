@@ -1,31 +1,33 @@
 # user-archiving
 
-EmberJS challenge, User Archiving:
+Feature request: User archiving.
 
-This test will present you with a very simple user interface to navigate.
-From the home page, your only option will be to go to the users page with a simple button click,
-after that, several users will appears for you that are pulled from a mocked back-end.
-Clicking on any of these users will take you to their individual profile pages.
+The current web application does not allow for users to be archived, and we would like this functionality to be added.
+When visiting a users profile, a button to archive that user should be present, and give an "are you sure" prompt.
+If the button is clicked, and yes is selected from the "are you sure" prompt, the user should have a value changed to display that they are archived.
+We would also like to see if a user is archived or not on their profile itself.
 
-The objective of this task is to add an "archived" value to the users, and to add a new button to their profiles that toggles this value.
-After clicking the newly made button to archive a user, you should be given an "Are you sure" prompt, to which you can say "yes", or "no".
-Clicking no should cancel the action of changing the value for archiving the user, and clicking yes should perform that action.
+This is a user profile at present:
+https://i.imgur.com/BIC34we.png
 
-* All user data is pulled from a mock back-end located in /server/mocks/users.js.
-* The user pages are using standard EmberJS routing.
-* The CSS framework being used in this project is Bulma, and can be used freely.
-
-An example of modifying a value of a user is given on their profiles. They each have a simple boolean named "value", which can be toggled between true, or false with a button click. This button can be found on every users profile.
-
-![user profile](https://i.imgur.com/9tm4LfN.png)
+We would like to have a button added on the right hand side for archiving the user, and have whether they are archived or not added as text on their profile.
 
 ## Requirements
 
 * Add an "archive" button to all user profiles, with a confirmation prompt.
 * Add an "arhived" value of type boolean to the users.
 * Display the arhived value of true or false on the user profile.
-* Change the archived boolean's value with the button you have created.
-* Ensure that the archived value of the user changes when the button is clicked and yes is chosen in the confirmation
+* Change the archived boolean's value with the button created.
+* Ensure that the archived value of the user changes when the button is clicked and yes is chosen in the confirmation. If they select "no" when asked if they are sure they would like to archive a user, the user should not be archived.
+* All emberjs tests should  still pass after the functionality is added.
+
+## Useful information
+
+* All user data is pulled from a mock back-end located in /server/mocks/users.js. This data correlates to a model in /app/models/users.js
+* The user pages are using standard EmberJS routing.
+* The CSS framework being used in this project is Bulma.
+
+An example of modifying a value of a user is given on their profiles. They each have a simple boolean named "value", which can be toggled between true, or false with a button click. This button can be found on every users profile.
 
 ## Prerequisites
 

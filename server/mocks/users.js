@@ -1,10 +1,10 @@
 'use strict';
 
-module.exports = function(app) {
+module.exports = function (app) {
   const express = require('express');
   let usersRouter = express.Router();
 
-  usersRouter.get('/', function(req, res) {
+  usersRouter.get('/', function (req, res) {
     res.send(
       {
         "data": [
@@ -48,6 +48,6 @@ module.exports = function(app) {
       }
     );
   });
-  
+
   app.use('/api/users', usersRouter);
 };
