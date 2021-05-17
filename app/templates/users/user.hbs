@@ -20,10 +20,11 @@
         <button
           type="button"
           class="button is-pulled-left mt-4"
-          {{on "click" (fn (mut @model.value) (not @model.value))}}
+          {{on "click" (fn this.modifyValue)}}
         >
           Change Value
         </button>
+
       </div>
     </div>
   </div>
