@@ -14,8 +14,5 @@ export default class UsersUserController extends Controller {
     //.catch (exception => {
     //  console.log(exception);
     //})
-
-    // Old method for storing user data. Causes no errors.
-    //this.model.value = !this.model.value;
   }
 }
