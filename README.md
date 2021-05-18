@@ -3,14 +3,17 @@
 Feature request: User archiving.
 
 The current web application does not allow for users to be archived, and we would like this functionality to be added.
-When visiting a users profile, a button to archive that user should be present, and give an "are you sure" prompt.
-If the button is clicked, and yes is selected from the "are you sure" prompt, the user should have a value changed to display that they are archived.
+When visiting a users profile, a button to archive that user should be present, and give an "are you sure" prompt with yes or no options.
+If the button is clicked, and yes is selected from the prompt, the user should have a value changed to indicate that they are archived.
 We would also like to see if a user is archived or not on their profile itself.
 
 This is a user profile at present:
 https://i.imgur.com/BIC34we.png
 
 We would like to have a button added on the right hand side for archiving the user, and have whether they are archived or not added as text on their profile.
+
+After archiving a user, clicking the button to return to the users page should no longer display this user.
+This feature does not currently hook into the backend, so refreshing your session will unarchive all users, do not worry about this happening.
 
 ## Requirements
 
@@ -19,7 +22,7 @@ We would like to have a button added on the right hand side for archiving the us
 * Display the arhived value of true or false on the user profile.
 * Change the archived boolean's value with the button created.
 * Ensure that the archived value of the user changes when the button is clicked and yes is chosen in the confirmation. If they select "no" when asked if they are sure they would like to archive a user, the user should not be archived.
-* All emberjs tests should  still pass after the functionality is added.
+* All tests must still pass after this functionality is added. (eslint, and ember tests)
 
 ## Useful information
 
