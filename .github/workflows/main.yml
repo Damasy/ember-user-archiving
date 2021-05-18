@@ -22,7 +22,7 @@ jobs:
         run: npm run lint:js
       - name: Template Linting
         run: npm run lint:hbs
-      - name: Ember-CLI Testing
-        run: ember test
+      - name: npm test
+        run: npm test
         env:
           CI: true
