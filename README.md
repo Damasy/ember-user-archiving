@@ -18,8 +18,8 @@ This feature does not currently hook into the backend, so refreshing your sessio
 ## Requirements
 
 * Add an "archive" button to all user profiles, with a confirmation prompt.
-* Add an "arhived" value of type boolean to the users.
-* Display the arhived value of true or false on the user profile.
+* Add an "archived" value of type boolean to the users.
+* Display the archived value of true or false on the user profile.
 * Change the archived boolean's value with the button created.
 * Ensure that the archived value of the user changes when the button is clicked and yes is chosen in the confirmation. If they select "no" when asked if they are sure they would like to archive a user, the user should not be archived.
 * All tests must still pass after this functionality is added. (eslint, and ember tests)
