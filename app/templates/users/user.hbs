@@ -1,11 +1,13 @@
 {{page-title 'User'}}
   <div class="container has-text-centered">
     <div class="column is-3 is-offset-4">
+
       <LinkTo @route="users">
         <button class="button mb-2" type="button">
           Back to users
         </button>
       </LinkTo>
+
       <div class="user-profile">
 
         <figure class="avatar">
@@ -21,12 +23,7 @@
           {{@model.value}}
         </p>
 
-        <button
-          type="button"
-          class="button is-pulled-left mt-4"
-        >
-          Change Value
-        </button>
+        {{!-- Place the component to archive/unarchive users here --}}
 
       </div>
     </div>
