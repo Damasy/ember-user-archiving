@@ -7,13 +7,16 @@ When visiting a users profile, a button to archive that user should be present, 
 If the button is clicked, and yes is selected from the prompt, the user should have a value changed to indicate that they are archived.
 We would also like to see if a user is archived or not on their profile itself.
 
-This is a user profile at present:
-https://i.imgur.com/BIC34we.png
-
-We would like to have a button added on the right hand side for archiving the user, and have whether they are archived or not added as text on their profile.
+We would like to have a button added on the bottom right hand side for archiving the user. This button should update a value in the user model called "archived" of type boolean.
+Whether or not a user is archived should be shown when viewing their profile.
 
 After archiving a user, clicking the button to return to the users page should no longer display this user.
 This feature does not currently hook into the backend, so refreshing your session will unarchive all users, do not worry about this happening.
+
+We would like to ensure that this added feature is working as intended by having proper testing.
+https://guides.emberjs.com/v3.26.0/testing/test-types/
+
+Integration(Application) tests should be added to ensure that the added functionality is added and working as intended.
 
 ## Requirements
 
