@@ -8,10 +8,13 @@ module.exports = function (app) {
     catches the Update request on a user
     PATCH "localhost:4200/api/users/1"
   */
-  usersRouter.patch('/:id', function (request) {
+  usersRouter.patch('/:id', function (request, res) {
     // Update data from the UI
-    const requestBody = request.body;
-    // res.send();
+    const user = usersJson.data.find(({id})=> {
+      return id === request.params.id;
+    });
+    user.attributes.archived = !user.attributes.archived;
+    res.send(user);
   });
 
   /*
@@ -46,7 +49,8 @@ const usersJson = {
     "attributes": {
       "name": "Albert Einstein",
       "image": "/images/Einstein.jpg",
-      "value": "false"
+      "value": "false",
+      "archived": true
     }
   },
   {
@@ -55,7 +59,8 @@ const usersJson = {
     "attributes": {
       "name": "Walt Disney",
       "image": "/images/Walt.jpg",
-      "value": "false"
+      "value": "false",
+      "archived": false
     }
   },
   {
@@ -64,7 +69,8 @@ const usersJson = {
     "attributes": {
       "name": "Bruce Lee",
       "image": "/images/Bruce.jpg",
-      "value": "false"
+      "value": "false",
+      "archived": false
     }
   },
   {
@@ -73,7 +79,8 @@ const usersJson = {
     "attributes": {
       "name": "Neil Armstrong",
       "image": "/images/Neil.jpg",
-      "value": "false"
+      "value": "false",
+      "archived": false
     }
   }
   ]
