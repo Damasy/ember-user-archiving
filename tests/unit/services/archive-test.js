@@ -9,4 +9,15 @@ module('Unit | Service | archive', function(hooks) {
     let service = this.owner.lookup('service:archive');
     assert.ok(service);
   });
+
+  test('toggleArchive is working like a charm!', function(assert) {
+    let service = this.owner.lookup('service:archive');
+    assert.true(service.toggleArchive(false));
+  });
+
+  test('getArchivingMsg is working like a charm!', function(assert) {
+    let service = this.owner.lookup('service:archive');
+    assert.equal(service.getArchivingMsg(true), 'User is archived..');
+  });
+
 });
