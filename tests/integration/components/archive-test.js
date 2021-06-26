@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, click } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Component | archive', function(hooks) {
@@ -9,18 +9,19 @@ module('Integration | Component | archive', function(hooks) {
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
+    this.set('userArchive', function() {
+      return true;
+    });
+    this.set('user', {
+      attributes: {
+        archived: true
+      }
+    })
+    await render(hbs`<Archive @userArchive={{this.userArchive}}/>`);
+    //await this.pauseTest();
+    assert.dom('[data-test-archive-button]').hasText('Archive user');
+    assert.dom('p.has-text-white').exists();
 
-    await render(hbs`<Archive />`);
-
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <Archive>
-        template block text
-      </Archive>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    await click('[data-test-archive-button]')
   });
 });
