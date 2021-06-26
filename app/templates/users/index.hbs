@@ -6,7 +6,7 @@
       {{#unless user.archived}}
         <div class="column">
 
-          <LinkTo @route="users.user" @model={{user}}>
+          <LinkTo @route="users.user" @model={{user}} data-user-id={{user.id}}>
             <div class="user-select is-220px">
               <img
                 class="is-pulled-left"
